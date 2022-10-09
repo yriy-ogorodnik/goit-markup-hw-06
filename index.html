@@ -457,18 +457,27 @@
           <div class="modal-title">Залиште свої дані, ми вам передзвонимо</div>
           <form name="modal_form" autocomplete="on" novalidate>
             <div class="form-field">
-              <label for="name" class="form-label">Ім'я</label>
+              <label for="name" class="form-label">Ім'я </label>
               <input type="text" class="form-input" name="name" id="name" />
+              <svg class="modal-icon" width="18" height="18">
+                <use href="./imeges/icons.svg#icon-modal-user"></use>
+              </svg>
             </div>
 
             <div class="form-field">
               <label for="tel" class="form-label">Телефон</label>
-              <input type="tel" class="form-input" name="tel" id="tel" />
+              <input type="tel" class="form-input" name="phone" id="tel" />
+              <svg class="modal-icon" width="18" height="18">
+                <use href="./imeges/icons.svg#icon-modal-tel"></use>
+              </svg>
             </div>
 
             <div class="form-field">
               <label for="mail" class="form-label">Пошта</label>
-              <input type="email" class="form-input" name="mail" id="mail" />
+              <input type="email" class="form-input" name="email" id="mail" />
+              <svg class="modal-icon" width="18" height="18">
+                <use href="./imeges/icons.svg#icon-modal-mail"></use>
+              </svg>
             </div>
 
             <div class="form-field">
@@ -480,7 +489,22 @@
               ></textarea>
             </div>
 
-            <button class="button" type="submit">Відправити</button>
+            <div class="form-field">
+              <label class="label-checkbox">
+                <input class="checkbox" type="checkbox" name="" value="" />
+                Погоджуюся з розсилкою та приймаю
+                <a href="#">Умови договору</a>
+                <span class="checkbox-icon">
+                  <!-- <svg class="modal-icon" width="16" height="15">
+                    <use href="./imeges/icons.svg#icon-icon-check"></use>
+                  </svg> -->
+                </span>
+              </label>
+            </div>
+
+            <button class="button modal-button" type="submit">
+              Відправити
+            </button>
           </form>
         </div>
       </div>
