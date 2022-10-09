@@ -610,6 +610,40 @@ address {
 .footer-social > .social-wrapper {
   margin-bottom: 0;
 }
+/* -----------sabscribe--input---footer----------------------------------- */
+.sabscribe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.subscribe-input {
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: var(--background-color-footer);
+  color: #fff;
+  margin-right: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  padding: 15px;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.button--subscribe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 28px;
+}
+.icon-send {
+  margin-left: 10px;
+  fill: currentColor;
+}
+.icon-send:hover {
+  fill: var(--accent-color);
+}
+
 /* -----------------backdrop------------ */
 .backdrop {
   position: fixed;
@@ -716,9 +750,11 @@ textarea {
   outline: none;
   padding: 12px 16px;
   transition: border-color 250ms linear;
+  cursor: pointer;
 }
-.form-field:hover > textarea,
-.form-field:focus > textarea {
+
+textarea:focus,
+textarea:hover {
   border-color: var(--accent-color);
 }
 
@@ -739,6 +775,7 @@ textarea {
   margin-bottom: 10px;
   outline: none;
   transition: border-color 250ms linear;
+  cursor: pointer;
 }
 
 .form-field {
@@ -775,30 +812,52 @@ textarea {
 .modal-button {
   display: block;
   margin: 0 auto;
+  outline: none;
 }
 
 .checkbox-icon {
   position: absolute;
-  margin-top: 0.2em;
+  margin-top: 0em;
   margin-left: -29em;
   width: 1.14em;
   height: 1.07em;
   overflow: hidden;
-  border-radius: 0.05em;
+  border-radius: 2px;
   background-color: white;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   box-shadow: 0 0 0 0.1em #212121;
 }
 
+.label-checkbox {
+  display: flex;
+  justify-content: center;
+  vertical-align: baseline;
+  cursor: pointer;
+}
 .checkbox {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  cursor: pointer;
+  padding-left: 7px;
+}
+.checkbox:hover ~ .checkbox-icon,
+.checkbox:focus ~ .checkbox-icon {
+  box-shadow: 0 0 0 0.1em var(--accent-color);
 }
 
 .checkbox:checked ~ .checkbox-icon {
   background-color: var(--accent-color);
   background-image: url(../imeges/icon-check.svg);
+  box-shadow: 0 0 0 0.1em var(--accent-color);
 }
-/* ------------------------------------------------- */
+.policy_link {
+  padding-left: 5px;
+}
+.policy_link:hover,
+.policy_link:focus {
+  text-decoration: underline;
+  color: var(--accent-color);
+  outline: none;
+}
