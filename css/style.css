@@ -605,12 +605,18 @@ address {
 .footer-flex {
   display: flex;
   align-items: baseline;
-  gap: 70px;
+}
+.foter-contact {
+  margin-right: 70px;
 }
 .footer-social > .social-wrapper {
   margin-bottom: 0;
 }
 /* -----------sabscribe--input---footer----------------------------------- */
+.footer-sabscribe {
+  display: block;
+  margin-left: auto;
+}
 .sabscribe {
   display: flex;
   justify-content: center;
@@ -817,8 +823,10 @@ textarea:hover {
 
 .checkbox-icon {
   position: absolute;
-  margin-top: 0em;
-  margin-left: -29em;
+  top: 3px;
+  left: 11px;
+  /* margin-top: 0em; */
+  /* margin-left: 29em; */
   width: 1.14em;
   height: 1.07em;
   overflow: hidden;
@@ -834,6 +842,10 @@ textarea:hover {
   justify-content: center;
   vertical-align: baseline;
   cursor: pointer;
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--secondary-text-color);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .checkbox {
   -webkit-appearance: none;
