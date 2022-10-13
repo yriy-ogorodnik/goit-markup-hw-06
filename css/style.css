@@ -686,11 +686,15 @@ address {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: transparent;
-
+  transition: border 350ms linear;
   right: 12px;
   top: 10px;
 
   cursor: pointer;
+}
+.modal-btn:hover,
+.modal-btn:focus {
+  border: 1px solid rgba(33, 150, 243, 0.8);
 }
 
 .is-hidden {
@@ -701,35 +705,13 @@ address {
 /* хрестик_____кнопка закриття___ */
 .close {
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 30px;
-  height: 30px;
-
-  transition: 300ms linear;
+  top: 6px;
+  left: 5px;
+  transition: fill 250ms linear;
 }
-.close:hover::before,
-.close:hover::after {
-  background-color: var(--accent-color);
-}
-.close:before,
-.close:after {
-  content: ' ';
-  position: absolute;
-  top: 7px;
-  left: 13px;
-
-  height: 16px;
-  width: 3px;
-  background-color: var(--primary-text-color);
-  transition: background-color 300ms linear;
-}
-.close:before {
-  transform: rotate(45deg);
-}
-.close:after {
-  transform: rotate(-45deg);
+.modal-btn:hover,
+.modal-btn:focus .close {
+  fill: var(--accent-color);
 }
 
 /* modal--forma */
@@ -848,11 +830,8 @@ textarea:hover {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .checkbox {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  padding-left: 7px;
 }
 .checkbox:hover ~ .checkbox-icon,
 .checkbox:focus ~ .checkbox-icon {
@@ -866,10 +845,10 @@ textarea:hover {
 }
 .policy_link {
   padding-left: 5px;
+  color: var(--accent-color);
+  text-decoration: underline;
+  outline: none;
 }
 .policy_link:hover,
 .policy_link:focus {
-  text-decoration: underline;
-  color: var(--accent-color);
-  outline: none;
 }
